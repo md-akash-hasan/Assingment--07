@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UseContext } from "./UseContext";
 
 export default function Hero() {
+  let { setDataContext, DataContext } = useContext(UseContext);
   return (
     <div className="container m-auto my-10">
       <div className="text text-center   ">
@@ -17,7 +19,7 @@ export default function Hero() {
       </div>
       <div className="containers md:grid-cols-4 sm:grid-cols-2 grid-cols-1 grid gap-5 my-10">
         <div className="content shadow rounded-xl py-5 px-8 text-center">
-          <h1 className="text-2xl font-bold">10</h1>
+          <h1 className="text-2xl font-bold">{DataContext.length}</h1>
           <p className="text-gray-500 font-semibold">Total Friends</p>
         </div>
         <div className="content shadow rounded-xl py-5 px-8 text-center">

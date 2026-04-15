@@ -1,8 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 export default function Friend({ Data }) {
   return (
-    <div className="p-5 shadow-md rounded-xl">
+    <NavLink to={`detels/${Data.id}`} className="p-5 shadow-md rounded-xl">
       <div className="img">
         <img
           className="h-20 m-auto rounded-full mb-3"
@@ -17,8 +18,11 @@ export default function Friend({ Data }) {
           {Data.days_since_contact}d ago
         </p>
         <div className="flex gap-3 justify-center">
-          {Data.tags.map((tag) => (
-            <p className="bg-green-100 text-green-500 py-1 px-3 rounded capitalize font-semibold line-clamp-1">
+          {Data.tags.map((tag, index) => (
+            <p
+              key={index}
+              className="bg-green-100 text-green-500 py-1 px-3 rounded capitalize font-semibold line-clamp-1"
+            >
               {tag}
             </p>
           ))}
@@ -31,6 +35,6 @@ export default function Friend({ Data }) {
           </p>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 }

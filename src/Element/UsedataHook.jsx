@@ -10,7 +10,7 @@ export default function UsedataHook() {
       setTimeout(() => {
         setOutData(datares);
         setloader(false);
-      }, 3500);
+      }, 1500);
     };
     Promice();
   }, []);

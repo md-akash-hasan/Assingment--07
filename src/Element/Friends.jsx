@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import UsedataHook from "./UsedataHook";
 import { ClockLoader } from "react-spinners";
 import Friend from "./Friend";
+import { UseContext } from "./UseContext";
 
 export default function Friends() {
+  let { setDataContext, DataContext } = useContext(UseContext);
   let { loader, OutData } = UsedataHook();
+  if (loader == false) {
+    setDataContext(OutData);
+  }
 
   return (
     <div>
       {loader ? (
-        <ClockLoader />
+        <div className="flex justify-center items-center h-[30vh]">
+          <ClockLoader />
+        </div>
       ) : (
         <div className="container m-auto">
           <div>

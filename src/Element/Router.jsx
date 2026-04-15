@@ -4,6 +4,7 @@ import Home from "../Page/Home";
 import TimeLine from "../Page/TimeLine";
 import Stats from "../Page/Stats";
 import Root from "../Root";
+import Detles from "./Detles";
 
 export let router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ export let router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "timeline", element: <TimeLine /> },
       { path: "stats", element: <Stats /> },
+      { path: "detels/:id", element: <Detles /> },
     ],
   },
 ]);
