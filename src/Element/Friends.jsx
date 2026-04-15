@@ -22,7 +22,7 @@ export default function Friends() {
           <div>
             <h1 className="font-semibold text-2xl my-10">Your Friend</h1>
           </div>
-          <div className="lg:grid-cols-4 grid gap-5 grid-cols-1 sm:grid-cols-2  md:grid-cols-3 ">
+          <div className="lg:grid-cols-4 grid gap-5 grid-cols-1 sm:grid-cols-2  md:grid-cols-3 my-15 ">
             {OutData.map((Data) => (
               <Friend key={Data.id} Data={Data}></Friend>
             ))}

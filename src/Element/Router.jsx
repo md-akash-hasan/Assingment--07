@@ -5,6 +5,7 @@ import TimeLine from "../Page/TimeLine";
 import Stats from "../Page/Stats";
 import Root from "../Root";
 import Detles from "./Detles";
+import Page404 from "./Page404";
 
 export let router = createBrowserRouter([
   {
@@ -17,4 +18,5 @@ export let router = createBrowserRouter([
       { path: "detels/:id", element: <Detles /> },
     ],
   },
+  { path: "*", element: <Page404 /> },
 ]);

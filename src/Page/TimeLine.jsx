@@ -27,12 +27,11 @@ export default function TimeLine() {
   });
 
   let show = BtnCliData.length <= 0;
-  console.log(show);
 
   return (
     <div>
       {show ? (
-        <h1 className="flex justify-center my-10 text-3xl text-center font-bold">
+        <h1 className="flex justify-center my-22 text-3xl text-center font-bold">
           No call text or video history is available
         </h1>
       ) : (
